@@ -67,6 +67,30 @@ header{
     #video_background{
         top: 0px;
     }
+
+    #tomatometer_reviews > img{
+        height: 35px !important;
+    }
+
+    .container_review > img{
+        width:  220px !important; 
+    }
+
+    .tomatometer_main_text{
+        font-size: 20px !important; 
+    }
+
+    .tomatometer_secondary_text{
+        font-size: 15px !important;
+    }
+
+    .review_secondary_text{
+        font-size: 13px !important;
+    }
+
+    .review_main_text{
+        font-size: 15px !important; 
+    }
 }
 
 @media (max-width: 600px)
@@ -77,6 +101,13 @@ header{
 }
 
 
+.tomatometer_secondary_text{
+    font-size: 1.2vw;
+}
+
+.review_secondary_text{
+    font-size: 1.2vw;
+}
 
 #navegador_header{
     font-size: 160%;
@@ -85,6 +116,10 @@ header{
     justify-content: center;
     overflow-x: visible;
     height: 130px;
+}
+
+.review_main_text{
+    font-size: 1.5vw;
 }
 
 #navegador_header > a{
@@ -137,7 +172,7 @@ header{
 }
 
 
-.score-rottentomatoes{
+.tomatometer_main_text{
     text-shadow: rgba(97, 96, 96, 0.24) 3px 3px;
     font-size: 2vw;
 }
