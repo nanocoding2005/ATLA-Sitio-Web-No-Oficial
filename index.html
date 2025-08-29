@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avatar: The Last Airbender. Sitio Web No Oficial</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <a href="index.html" id="imagen_logo">
-        </a>
+        <a href="index.html" id="imagen_logo"></a>
         <nav id="navegador_header">
             <a href="films.com"><p>INICIO</p></a>
             <a href="technology.com"><p>TRAMA</p></a>
@@ -18,56 +23,80 @@
         </nav>
     </header>
 
-    <section id="container_principal">
-        <video id="video_background" src="./imagenes/video_background.mp4" autoplay muted loop></video>
-        <article class="container_review">
-            <img src="./imagenes/rotten tomatoes.png" alt="Logo de Rotten Tomatoes.">
-            <div id="tomatometer_reviews">
-                <img src="./imagenes/Rotten_Tomatoes score.png" alt="Icono de Tomatometer.">
+    <section class="container_styles">
+        <video class="video_background" src="./imagenes/video_background.mp4" autoplay muted loop></video>    
+        <div id="reviews_wrapper">
+            <article class="container_review">
+                <a href="https://www.rottentomatoes.com/tv/avatar_the_last_airbender" target="_blank" rel="noopener noreferrer">
+                    <img src="./imagenes/rotten tomatoes.png" alt="Logo de Rotten Tomatoes.">
+                </a>
+                <div id="tomatometer_reviews">
+                    <img src="./imagenes/Rotten_Tomatoes score.png" alt="Icono de Tomatometer.">
+                    <div>
+                        <p class="tomatometer_main_text">
+                            100%
+                        </p>
+                        <p class="tomatometer_secondary_text">
+                            Avg. Tomatometer.
+                        </p>
+                    </div>
+                    <img src="./imagenes/popcornmeter.png" alt="Icono de Popcornmeter.">
+                    <div>
+                        <p class="tomatometer_main_text">
+                            98%
+                        </p>
+                        <p class="tomatometer_secondary_text">
+                            Avg. Popcornmeter.
+                        </p>
+                    </div>
+                </div>         
+            </article>
+
+            <article class="container_review">
+                <a href="https://www.ign.com/articles/2015/10/06/avatar-the-last-airbender-the-complete-series-dvd-review" target="_blank" rel="noopener noreferrer">
+                    <img src="./imagenes/ign logo.png" alt="Logo de IGN">
+                </a>
                 <div>
-                    <p class="tomatometer_main_text">
-                        100%
-                    </p>
-                    <p class="tomatometer_secondary_text">
-                        Avg. Tomatometer.
-                    </p>
-                </div>
-                <img src="./imagenes/popcornmeter.png" alt="Icono de Popcornmeter.">
+                    <p class="review_main_text">"...Una de las mejores series de animación de todos los tiempos"</p>
+                    <p class="review_secondary_text" style="margin-top: 5px;">-Max Nicholson</p>
+                </div>         
+            </article>
+
+            <article class="container_review">
+                <a href="https://www.imdb.com/title/tt0417299/" target="_blank" rel="noopener noreferrer"><img src="./imagenes/imbd.png" alt="Logo de IMDB"></a>
                 <div>
-                    <p class="tomatometer_main_text">
-                        98%
-                    </p>
-                    <p class="tomatometer_secondary_text">
-                        Avg. Popcornmeter.
-                    </p>
-                </div>
-            </div>         
-        </article>
+                    <p class="review_main_text">9.3 / 10</p>
+                    <p class="review_secondary_text" style="margin-top: 5px;">415k Reviews</p>
+                </div>         
+            </article>
 
-        <article class="container_review">
-            <img src="./imagenes/ign logo.png" alt="Logo de IGN">
-            <div>
-                <p class="review_main_text">"...One of the greatest animated series of all time"</p>
-                <p class="review_secondary_text" style="margin-top: 5px;">-Max Nicholson</p>
-            </div>         
-        </article>
-
-        <article class="container_review">
-            <img src="./imagenes/ign logo.png" alt="Logo de IGN">
-            <div>
-                <p class="review_main_text">"...One of the greatest animated series of all time"</p>
-                <p class="review_secondary_text" style="margin-top: 5px;">-Max Nicholson</p>
-            </div>         
-        </article>
-
-        <article class="container_review">
-            <img src="./imagenes/ign logo.png" alt="Logo de IGN">
-            <div>
-                <p class="review_main_text">"...One of the greatest animated series of all time"</p>
-                <p class="review_secondary_text" style="margin-top: 5px;">-Max Nicholson</p>
-            </div>         
-        </article>
-
+            <article class="container_review">
+                <a href="https://www.popzara.com/movies/blu-ray-dvd-reviews/avatar-the-last-airbender-the-complete-series/" target="_blank" rel="noopener noreferrer"><img src="./imagenes/popzara_logo.png" alt="Logo de Popzara"></a>
+                <div>
+                    <p class="review_main_text">"...Una de las mejores series emitidas en Nickelodeon"</p>
+                    <p class="review_secondary_text" style="margin-top: 5px;">-Chris Mitchell</p>
+                </div>         
+            </article>
+        </div>     
     </section>
+
+    <section id="container_sinapsis" class="container_styles">
+        <video id="video_sinapsis" class="video_background" src="./imagenes/video_sinapsis.mp4" autplay muted loop></video>
+        <p id="texto_sinapsis">
+            Hace un siglo, el joven Avatar <span class="texto_remarcado" style="color: rgb(73, 146, 255);">Aang</span>, temeroso de sus nuevas responsabilidades, huyó de su hogar y una tormenta lo obligó a adentrarse en el océano.<br><br>
+            Quedó atrapado junto con su bisonte volador <span class="texto_remarcado" style="color: rgb(255, 174, 1);">Appa</span> en animación suspendida en un iceberg cerca del Polo Sur.<br><br>
+            Poco después, el Señor del Fuego <span class="texto_remarcado" style="color: rgb(255, 73, 1);">Sozin</span>, gobernante de la Nación del Fuego, desató una guerra mundial para expandir el imperio de su nación. Sabiendo que el <span class="texto_remarcado" style="color: rgb(73, 146, 255);">Avatar</span> debía ser un <span class="texto_remarcado" style="color: rgb(255, 255, 255);">Nómada del Aire</span>, llevó a cabo un genocidio contra los Nómadas del Aire, que programó con la llegada de un cometa que otorga a los maestros fuego un tremendo poder.<br><br>
+            Cien años después, los hermanos <span class="texto_remarcado" style="color: rgb(15, 4, 172);">Katara y Sokka</span> , adolescentes de la <span class="texto_remarcado" style="color: rgb(15, 4, 172);">Tribu Agua del Sur</span>, descubren accidentalmente a Aang y lo reviven.
+        </p>
+    </section>
+
+    <footer>
+        <div id="redes_sociales_footer">
+            <a href="https://www.facebook.com/avatarthelastairbenderla/?brand_redir=104956949616#" target="_blank" rel="noopener noreferrer"><img src="./imagenes/facebook.png" alt="Icono de Facebook."></a>
+            <a href="https://www.youtube.com/@avatarthelastairbender" target="_blank" rel="noopener noreferrer"><img src="./imagenes/youtube.png" alt="Icono de Youtube."></a>
+            <a href="https://www.tiktok.com/@AvatarLegends" target="_blank" rel="noopener noreferrer"><img src="./imagenes/tiktok.png" alt="Icono de Tiktok."></a>
+        </div>
+        <p id="texto_footer">© Nickelodeon 2005. Stefano Biglia 2025</p>
+    </footer>
 </body>
 </html>
