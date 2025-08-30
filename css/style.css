@@ -330,16 +330,16 @@ footer{
 }
 
 #wrapper_temporada_1{
-    background-image: url(/imagenes/temporada\ 1.jpg);
+    background-image: url(../imagenes/temporada\ 1.jpg);
     background-position: center -120px;
 }
 
 #wrapper_temporada_2{
-    background-image: url(/imagenes/temporada\ 2.jpg);
+    background-image: url(../imagenes/temporada\ 2.jpg);
 }
 
 #wrapper_temporada_3{
-    background-image: url(/imagenes/temporada\ 3.jpg);
+    background-image: url(../imagenes/temporada\ 3.jpg);
     background-position: center -120px;
 }
 
