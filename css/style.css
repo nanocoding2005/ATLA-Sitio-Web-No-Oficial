@@ -235,6 +235,12 @@ footer{
     gap: 5px;
 }
 
+.footer_shadow{
+    -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #0000009f;
+}
+
 #texto_footer{
     text-align: center;
     font-size: 12px;
@@ -260,6 +266,19 @@ footer{
     }
     .numero_temporada{
         font-size: 14vw !important;
+    }
+    .nombre_personaje{
+        font-size: 7vw !important;
+    }
+    #personajes_main_container{
+        padding-top: 100px !important;
+    }
+    .descripcion_personaje{
+        font-size: 5vw !important;
+        width: 70vw !important;
+    }
+    .foto_personaje{
+        height: 30vw !important;
     }
 }
 
@@ -301,18 +320,6 @@ footer{
     text-shadow: 5px 5px #424242;
 }
 
-#numero_temporada_1{
-    text-shadow: 2px 2px rgba(0, 202, 253, 0.637);
-}
-
-#numero_temporada_2{
-    text-shadow: 2px 2px rgb(20, 163, 56);
-}
-
-#numero_temporada_3{
-    text-shadow: 2px 2px rgb(209, 41, 41)
-}
-
 .wrapper_temporada{
     height: 500px;
     background-size: cover;
@@ -334,8 +341,70 @@ footer{
     background-position: center -120px;
 }
 
-#wrapper_temporada_2{
-    background-image: url(../imagenes/temporada\ 2.jpg);
+#personajes_main_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    gap: 50px;
+    background-color: rgba(168, 222, 231, 0.705);
+    -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #0000009f;
+}
+
+.personaje_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #0000009f;
+    border-radius: 5px;
+}
+
+.personaje_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre_personaje{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.233);
+}
+
+.descripcion_personaje{
+    width: 700px;
+    gap: 20px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 30px;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.315);
+    margin: 0px 10px 10px 10px;
+    -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #0000009f;
+    border-radius: 10px;
+}
+
+.personaje_wrapper:hover + .descripcion_personaje{
+    opacity: 1;
+}
+
+.foto_personaje{
+    height: 350px;
+    border-radius: 5px;
+    margin: 6px;
+    -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #0000009f;
 }
 
 #wrapper_temporada_3{
@@ -343,44 +412,16 @@ footer{
     background-position: center -120px;
 }
 
-#wrapper_temporada_1:hover #texto_temporada_1{
+.wrapper_temporada:hover .sinapsis_temporada{
     opacity: 1;
 }
 
-#wrapper_temporada_2:hover #texto_temporada_2{
-    opacity: 1;
-}
-
-#wrapper_temporada_3:hover #texto_temporada_3{
-    opacity: 1;
+.wrapper_temporada:hover .numero_temporada{
+    opacity: 0;
 }
 
 .wrapper_temporada:hover{
     background-color: rgba(255, 255, 255, 0.6);
-}
-
-#wrapper_temporada_1:hover #numero_temporada_1{
-    opacity: 0;
-}
-
-#wrapper_temporada_2:hover #numero_temporada_2{
-    opacity: 0;
-}
-
-#wrapper_temporada_3:hover #numero_temporada_3{
-    opacity: 0;
-}
-
-#texto_temporada_1{
-    background-color: rgba(56, 167, 241, 0.459);
-}
-
-#texto_temporada_2{
-    background-color: rgba(56, 241, 87, 0.459);
-}
-
-#texto_temporada_3{
-    background-color: rgba(241, 56, 56, 0.459);
 }
 
 
