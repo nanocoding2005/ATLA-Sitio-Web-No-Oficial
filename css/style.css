@@ -539,3 +539,127 @@ footer{
 #tomatometer_reviews > img{
     height: 3vw;
 }
+
+#container_contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px 50px 0px;
+    gap: 50px;
+}
+
+#form_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    background-color: rgba(224, 224, 224, 0.712);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nombre, #apellido{
+    width: 400px;
+}
+
+#nombre, #apellido, #email{
+    height: 40px;
+    padding-left: 10px;
+}
+
+#nombre, #apellido, #email, #mensaje{
+    padding-left: 10px;
+}
+
+#mensaje{
+    padding-top: 10px;
+}
+
+#h1_contacto{
+    font-size: 45px;
+    text-shadow: 2px 2px white;
+    background-color: rgba(224, 224, 224, 0.712);
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+}
+
+#h1_contacto > p{
+    font-family: "DM Serif Text", serif;
+    font-style: normal; 
+}
+
+#email, #mensaje, #boton_enviar{
+    width: 450px;
+}
+
+#mensaje{
+    max-width: 450px;
+    min-width: 450px;
+    height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+#boton_enviar{
+    height: 50px;
+    font-size: 25px;    
+}
+
+#boton_enviar > p{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@media (max-width: 550px){
+    #h1_contacto{
+        font-size: 25px;
+    }
+
+    #mensaje{
+        max-width: 250px;
+        min-width: 250px;
+        height: 200px;
+        max-height: 200px;
+        min-height: 200px;
+    }
+
+    #email, #mensaje, #boton_enviar{
+        width: 250px;
+    }
+
+    #nombre, #apellido{
+        width: 200px;
+    }
+
+
+}
+
+.shadow_bg{
+    -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #0000009f;
+    transition: all 0.2s ease-in-out;
+}
+
+.shadow_bg:hover{
+    -webkit-box-shadow: 0px 0px 15px 0px #0000008f;
+    -moz-box-shadow: 0px 0px 15px 0px #000000;
+    box-shadow: 0px 0px 15px 0px #0000009f;
+}
+
+#button_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
