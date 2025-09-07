@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar: The Last Airbender. Sitio Web No Oficial (Personajes)</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="shadow_bg">
+        <a href="index.html"><img id="imagen_logo" src="./imagenes/logo_atla.png" alt="Logo de Avatar: The Last Airbender"> </a>
+        <nav id="navegador_header">
+            <a href="index.html"><p>INICIO</p></a>
+            <a href="trama.html"><p>TRAMA</p></a>
+            <a href="galeria.html"><p>GALERIA</p></a>
+            <a href="contacto.html"><p>CONTACTO</p></a>
+        </nav>
+    </header>
+    <section id="container_galeria" class="shadow_bg">
+      <div class="gallery">
+        <a href="#img1" class="shadow_bg"><img src="./imagenes/galeria1.png" alt="Imagen 1"></a>
+        <a href="#img2" class="shadow_bg"><img src="./imagenes/galeria2.png" alt="Imagen 2"></a>
+        <a href="#img3" class="shadow_bg"><img src="./imagenes/galeria3.png" alt="Imagen 3"></a>
+        <a href="#img4" class="shadow_bg"><img src="./imagenes/galeria4.png" alt="Imagen 4"></a>
+        <a href="#img5" class="shadow_bg"><img src="./imagenes/galeria5.png" alt="Imagen 5"></a>
+        <a href="#img6" class="shadow_bg"><img src="./imagenes/galeria6.png" alt="Imagen 6"></a>
+        <a href="#img7" class="shadow_bg"><img src="./imagenes/galeria7.png" alt="Imagen 7"></a>
+        <a href="#img8" class="shadow_bg"><img src="./imagenes/galeria8.png" alt="Imagen 8"></a>
+        <a href="#img9" class="shadow_bg"><img src="./imagenes/galeria9.png" alt="Imagen 9"></a>
+        <a href="#img10" class="shadow_bg"><img src="./imagenes/galeria10.png" alt="Imagen 10"></a>
+        <a href="#img11" class="shadow_bg"><img src="./imagenes/galeria11.png" alt="Imagen 11"></a>
+        <a href="#img12" class="shadow_bg"><img src="./imagenes/galeria12.png" alt="Imagen 12"></a>
+        <a href="#img13" class="shadow_bg"><img src="./imagenes/galeria13.png" alt="Imagen 13"></a>
+        <a href="#img14" class="shadow_bg"><img src="./imagenes/galeria14.png" alt="Imagen 14"></a>
+        <a href="#img15" class="shadow_bg"><img src="./imagenes/galeria15.png" alt="Imagen 15"></a>
+    </div>
+
+      <div class="lightbox" id="lightbox">
+          <span class="close">&times;</span>
+          <span class="btn" id="prev">&#10094;</span>
+          <img id="lightbox-img" src="" alt="">
+          <span class="btn" id="next">&#10095;</span>
+      </div>
+    </section>
+    
+    <footer class="footer_shadow">
+        <div id="redes_sociales_footer">
+            <a href="https://www.facebook.com/avatarthelastairbenderla/?brand_redir=104956949616#" target="_blank" rel="noopener noreferrer"><img src="./imagenes/facebook.png" alt="Icono de Facebook."></a>
+            <a href="https://www.youtube.com/@avatarthelastairbender" target="_blank" rel="noopener noreferrer"><img src="./imagenes/youtube.png" alt="Icono de Youtube."></a>
+            <a href="https://www.tiktok.com/@AvatarLegends" target="_blank" rel="noopener noreferrer"><img src="./imagenes/tiktok.png" alt="Icono de Tiktok."></a>
+        </div>
+        <p id="texto_footer">© Nickelodeon 2005. Stefano Biglia 2025</p>
+    </footer>
+    
+</body>
+
+  <script>
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        showImage();
+        lightbox.classList.add('active');
+      });
+    });
+
+
+    function showImage() {
+      lightboxImg.src = images[currentIndex].src; 
+    }
+
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
+    });
+
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+</html>
