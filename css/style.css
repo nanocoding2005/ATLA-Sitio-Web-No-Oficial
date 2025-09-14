@@ -25,17 +25,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
     background-color: white;
     -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
     -moz-box-shadow: 0px 0px 8px 0px #000000;
     box-shadow: 0px 0px 8px 0px #0000009f;
+    row-gap: 0px;
 }
 
 #imagen_logo{
-    height: 80px;
-    width: 140px;
-    margin-left: 20px;
+    height: 75px;
     background-image: url("/imagenes/logo_atla.png");
     background-size:cover;
     background-repeat: no-repeat;
@@ -55,6 +55,23 @@ header{
         justify-content: space-around;
         flex-direction: column;
         gap: 150px;
+    }
+
+    header{
+        justify-content: center;
+    }
+
+    #navegador_header{
+        width: 100vw;
+    }
+
+    #navegador_header > a{
+        width: 100%;
+    }
+
+    #imagen_logo, header > a{
+        height: 90px;
+        height: 90px !important;
     }
 
     .texto_sinapsis{
@@ -92,31 +109,10 @@ header{
     }
 }
 
-@media (max-width: 600px)
-{
-    #navegador_header{
-        font-size: 75% !important ; 
-    }
-}
-
 @media (max-width: 450px) {
 
     #container_principal{
         gap: 30px !important;
-    }
-
-    #navegador_header > a{
-        height: 40px !important;
-    }
-
-    #imagen_logo{
-        height: 40px !important;
-        width: 80px !important;
-        margin-left: 5px !important;
-    }
-
-    #navegador_header{
-        height: 40px !important;
     }
 
     #tomatometer_reviews > img{
@@ -145,20 +141,6 @@ header{
 
 }
 
-@media (max-width: 370px) {
-    #navegador_header{
-        font-size: 40% !important ; 
-    }
-}
-
-@media (max-width: 320px) {
-    #imagen_logo{
-        height: 20px !important;
-        width: 60px !important;
-    }
-}
-
-
 .tomatometer_secondary_text{
     font-size: 1.2vw;
 }
@@ -186,6 +168,13 @@ header{
     font-style: italic;
 }
 
+header > a{
+    width: fit-content;
+    height: 75px;
+    overflow-y: hidden;
+    margin-left: 20px;
+}
+
 #navegador_header > a{
     text-decoration: none;
     color: black;
@@ -193,6 +182,7 @@ header{
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
+    justify-content: center;
     height: 80px;
     align-items: center;
     transition: background-color 0.4s ease-in-out;
