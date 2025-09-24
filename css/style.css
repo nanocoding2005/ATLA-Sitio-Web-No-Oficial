@@ -175,8 +175,11 @@ header > a{
     margin-left: 20px;
 }
 
-#navegador_header > a{
+a{
     text-decoration: none;
+}
+
+#navegador_header > a{
     color: black;
     background-color: rgba(128, 128, 128, 0.247);
     padding-left: 10px;
@@ -244,16 +247,56 @@ footer{
     box-shadow: 0px 0px 8px 0px #0000009f;
 }
 
-@media (max-width: 1330px){
-    .sinapsis_temporada{
-        font-size: 1.4rem !important;
+.imagen_sinapsis{
+    height: 100%; 
+    width: 400px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1210px){
+    .texto_sinapsis{
+        font-size: 2.2rem !important;
+    }
+    .imagen_sinapsis{
+        width: 300px;
+    }
+}
+
+@media (max-width: 770px){
+    .texto_sinapsis{
+        font-size: 1.7rem !important;
+    }
+    .texto_imagen{
+        width: 40vw !important;
+    }
+    .imagen_sinapsis{
+        width: 200px;
+    }
+}
+
+@media (max-width: 500px){
+    .texto_sinapsis{
+        font-size: 1.3rem !important;
+    }
+    .imagen_sinapsis{
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 460px){
+    .texto_sinapsis{
+        font-size: 1rem !important;
+    }
+    .texto_imagen{
+        width: 35vw !important;
+    }
+
+    .imagen_sinapsis{
+        width: 140px;
     }
 }
 
 @media (max-width: 750px){
-    .sinapsis_temporada{
-        font-size: 1.2rem !important;
-    }
     .numero_temporada{
         font-size: 14vw !important;
     }
@@ -272,17 +315,6 @@ footer{
     }
 }
 
-@media (max-width: 600px){
-    .sinapsis_temporada{
-        font-size: 1rem !important;
-    }
-}
-
-@media (max-width: 350px){
-    .sinapsis_temporada{
-        font-size: 0.8rem !important;
-    }
-}
 @media (max-width: 1205px){
     #wrapper_temporada_1{
         background-position: center 0px !important;
@@ -292,15 +324,23 @@ footer{
     }
 }
 
+.container_sinapsis_imagen{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .sinapsis_temporada{
-    position: absolute;
-    opacity: 0;
-    width: 95vw;
-    padding: 10px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
     -webkit-box-shadow: 0px 0px 8px 0px #0000008f;
     -moz-box-shadow: 0px 0px 8px 0px #000000;
     box-shadow: 0px 0px 8px 0px #0000009f;
     transition: opacity 0.5s ease-in-out;
+    align-items: center;
 }
 
 .numero_temporada{
@@ -323,7 +363,7 @@ footer{
     box-shadow: 0px 0px 8px 0px #0000009f;
     background-color: rgba(255, 255, 255, 0.171);
     background-blend-mode: lighten;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-size 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 #wrapper_temporada_1{
@@ -402,16 +442,8 @@ footer{
     background-position: center -120px;
 }
 
-.wrapper_temporada:hover .sinapsis_temporada{
-    opacity: 1;
-}
-
-.wrapper_temporada:hover .numero_temporada{
-    opacity: 0;
-}
-
 .wrapper_temporada:hover{
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.336);
 }
 
 
@@ -466,10 +498,20 @@ footer{
 #container_sinapsis:hover #video_sinapsis{
     opacity: 70%;
 }
+
 .texto_sinapsis{
-    font-size: 1.8rem;
+    font-size: 3rem;
     margin: 80px;
+    width: 80%;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.753);
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.texto_imagen{
+    width: 50%;
+    margin: 10px;
 }
 
 .container_review{
